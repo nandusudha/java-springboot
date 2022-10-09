@@ -27,12 +27,12 @@ pipeline {
             echo 'Always'
             }
         }
-        post { 
+    post { 
         failure { 
             echo 'fail'
             }
         }
-        post { 
+    post { 
         Success { 
             echo 'Success'
             }
