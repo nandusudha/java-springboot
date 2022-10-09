@@ -41,19 +41,19 @@ pipeline {
                    echo 'Deploy prod'
                     }
                 }
-    post { 
-        always { 
-             echo 'Always'
-        }
+       post { 
+             always { 
+                   echo 'Always'
+               }
     
-        failure { 
-            echo 'failed'
-        }
+              failure { 
+              echo 'failed'
+            }
     
-    aborted { 
-            echo 'aborted'
-        }
-    }     
-}    
+              aborted { 
+              echo 'aborted'
+            }
+         }     
+             }    
         }
      
