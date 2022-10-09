@@ -41,19 +41,20 @@ pipeline {
                     steps { 
                  echo 'Deploy prod'
                     }
-
+                }
                  post { 
         always { 
             echo 'Always'
         }
-    }
+    
     failure { 
             echo 'failed'
         }
-    }
+    
     aborted { 
             echo 'aborted'
         }
-    }         
+    }     
+}    
         }
      
