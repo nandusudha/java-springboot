@@ -13,10 +13,11 @@ pipeline {
                 echo 'Test'
                 sh 'mvn Test'
             }
-    }
+        }
     post { 
         always { 
             echo 'Build is completed Succesfully!'
         }
+    }
     }
 }
