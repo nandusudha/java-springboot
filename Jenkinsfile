@@ -1,7 +1,6 @@
 pipeline {
     agent any
-    stages {
-        
+    stages {        
         stage('Build') {
             steps {
                 echo 'Build'
@@ -13,11 +12,6 @@ pipeline {
                 echo 'Test'
                 sh 'mvn Test'
             }
-        }
-    post { 
-        always { 
-            echo 'Build is completed Succesfully!'
-        }
-    }
+        }   
     }
 }
