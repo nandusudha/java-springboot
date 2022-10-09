@@ -4,12 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
+                sh 'mvn clean package'
             
             }
         }
         stage('Test') {
             steps {
                 echo 'Test'
+                sh 'mvn Test'
             }
         }
         stage('Sonar-qube') {
@@ -20,21 +22,6 @@ pipeline {
         stage('Deploy Dev') {
             steps {
                 echo 'Deploy Dev'
-            }
-        }
-    post { 
-        always { 
-            echo 'Always'
-            }
-        }
-    post { 
-        failure { 
-            echo 'fail'
-            }
-        }
-    post { 
-        Success { 
-            echo 'Success'
             }
         }
 
