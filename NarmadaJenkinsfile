@@ -28,7 +28,6 @@ pipeline {
                     steps {
                  echo 'Deploy QA'
                     }
-                
                  }
 
                  stage('Deploy Stage') {
