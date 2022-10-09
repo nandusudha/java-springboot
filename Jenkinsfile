@@ -10,8 +10,17 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test'
-              
+            }
+        }
+        stage('Sonar-qube') {
+            steps {
+                echo 'Sonar-qube'      
             }
         }   
+        stage('Deploy Dev') {
+            steps {
+                echo 'Deploy Dev'
+            }
+        }
     }
 }
