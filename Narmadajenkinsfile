@@ -6,13 +6,13 @@ pipeline {
                     echo 'Build'
                    
                  }
-                }
+                  }
             stage('Test') {
                     steps {
                       echo 'Test'
                        
                  }
-                }
+                  }
             stage('sonar-qube') {
                     steps {
                      echo 'sonar-qube'
@@ -21,26 +21,26 @@ pipeline {
             stage('Deploy Dev') {
                     steps {
                      echo 'Deploy Dev'
-                    }
-                 }
+                }
+                  }
 
             stage('Deploy QA') {
                     steps {
                     echo 'Deploy QA'
-                    }
-                 }
+                }
+                  }
 
             stage('Deploy Stage') {
                     steps {
                      echo 'Deploy stage'
-                    }
-                 }
+                }
+                  }
 
             stage('Deploy prod') {
                     steps { 
                    echo 'Deploy prod'
-                    }
                 }
+                  }
        post { 
              always { 
                    echo 'Always'
@@ -48,12 +48,12 @@ pipeline {
     
               failure { 
               echo 'failed'
-            }
+              }
     
               aborted { 
               echo 'aborted'
-            }
-         }     
-             }    
-        }
+              }
+            }     
+              }    
+                 }
      
