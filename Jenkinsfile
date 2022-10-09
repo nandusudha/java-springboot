@@ -22,5 +22,21 @@ pipeline {
                 echo 'Deploy Dev'
             }
         }
+    post { 
+        always { 
+            echo 'Always'
+            }
+        }
+        post { 
+        failure { 
+            echo 'fail'
+            }
+        }
+        post { 
+        Success { 
+            echo 'Success'
+            }
+        }
+
     }
 }
