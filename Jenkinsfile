@@ -24,6 +24,5 @@ pipeline {
                 echo 'Deploy Dev'
             }
         }
-
     }
 }
