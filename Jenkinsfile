@@ -1,11 +1,18 @@
 pipeline {
     agent any
     stages {
+        
         stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Build'
+                sh 'mvn clean package'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Test'
+                sh 'mvn Test'
+            }
     }
     post { 
         always { 
