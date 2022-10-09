@@ -15,9 +15,9 @@ pipeline {
                 }
                  stage('sonar-qube') {
                     steps {
-                       echo 'sonar-qube'
-                    }
+                     echo 'sonar-qube'
                  }
+                  }
                  stage('Deploy Dev') {
                     steps {
                         echo 'Deploy Dev'
@@ -41,7 +41,7 @@ pipeline {
                  echo 'Deploy prod'
                     }
                 }
-                 post { 
+    post { 
         always { 
             echo 'Always'
         }
