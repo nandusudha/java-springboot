@@ -1,5 +1,5 @@
 pipeline {
-     agent any 
+    agent any 
         stages {
             stage('Build') {
                   steps {
@@ -41,7 +41,7 @@ pipeline {
                    echo 'Deploy prod'
                 }
                   }
-       post { 
+    post { 
              always { 
                    echo 'Always'
                }
