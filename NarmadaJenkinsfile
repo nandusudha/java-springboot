@@ -42,8 +42,9 @@ pipeline {
                  echo 'Deploy prod'
                     }
                 }
-                 post { 
-        always { 
+               }
+            post { 
+                 always { 
             echo 'Always'
         }
     
@@ -55,6 +56,6 @@ pipeline {
             echo 'aborted'
         }
     }     
-}    
+    
         }
      
