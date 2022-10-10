@@ -4,13 +4,13 @@ pipeline {
             stage('Build') {
                    steps {
                     echo 'Build'
-                    sh 'mvn clean package'
+                   
                  }
                 }
                  stage('Test') {
                     steps {
                       echo 'Test'
-                       sh 'mvn test'
+                       
                  }
                 }
                  stage('sonar-qube') {
@@ -28,7 +28,6 @@ pipeline {
                     steps {
                  echo 'Deploy QA'
                     }
-                
                  }
 
                  stage('Deploy Stage') {
@@ -43,8 +42,8 @@ pipeline {
                     }
                 }
                }
-            post { 
-                 always { 
+    post { 
+        always { 
             echo 'Always'
         }
     
@@ -56,6 +55,6 @@ pipeline {
             echo 'aborted'
         }
     }     
-    
+  
         }
      
