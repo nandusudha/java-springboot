@@ -1,5 +1,5 @@
 pipeline {
-     agent any 
+     agent any
         stages {
             stage('Build') {
                    steps {
@@ -23,38 +23,55 @@ pipeline {
                         echo 'Deploy Dev'
                     }
                  }
-
+ 
                  stage('Deploy QA') {
                     steps {
                  echo 'Deploy QA'
                     }
                  }
-
+ 
                  stage('Deploy Stage') {
                     steps {
                  echo 'Deploy stage'
                     }
                  }
-
+ 
                  stage('Deploy prod') {
-                    steps { 
+                    steps {
                  echo 'Deploy prod'
                     }
                 }
                }
-    post { 
-        always { 
+    post {
+        always {
             echo 'Always'
         }
-    
-    failure { 
+   
+    failure {
             echo 'failed'
         }
-    
-    aborted { 
+   
+    aborted {
             echo 'aborted'
         }
-    }     
-  
+    }    
+ 
         }
      
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
