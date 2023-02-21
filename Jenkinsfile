@@ -13,11 +13,7 @@ pipeline {
                        
                  }
                 }
-                 stage('sonar-qube') {
-                    steps {
-                       echo 'sonar-qube'
-                    }
-                 }
+                 
                  stage('Deploy Dev') {
                     steps {
                         echo 'Deploy Dev'
