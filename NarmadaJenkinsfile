@@ -51,9 +51,7 @@ pipeline {
             echo 'failed'
         }
    
-    aborted {
-            echo 'aborted'
-        }
+   
     }    
  
         }
